@@ -11,7 +11,7 @@ export default function Header() {
       <div className={style.brand}>
         <Link href="/">
           <a href="#">
-            Irving
+            Irving Dinh
           </a>
         </Link>
       </div>

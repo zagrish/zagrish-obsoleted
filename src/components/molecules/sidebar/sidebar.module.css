@@ -1,0 +1,24 @@
+.section {
+  background-color: #FFFFFF;
+  border-right: 1px #EAEBF0 solid;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: var(--header-height);
+
+  width: var(--sidebar-width);
+}
+
+.menuItemIcon {
+  background-color: #172B4D;
+  border-radius: 3px;
+  color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 24px;
+  height: 24px;
+}

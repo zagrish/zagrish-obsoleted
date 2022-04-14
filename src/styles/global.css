@@ -8,6 +8,8 @@
     --header-color: #FFFFFF;
     --header-height: 60px;
 
+    --sidebar-width: 270px;
+
     --color-primary: #2279FF;
 
     --font-size: 16px;
@@ -18,9 +20,15 @@
     --border-radius: 4px;
 
     --html-min-width: 1280px;
+
+    --body-background-color: #F9FAFC;
   }
 }
 
 html {
   min-width: var(--html-min-width);
+}
+
+body {
+  background-color: var(--body-background-color);
 }
