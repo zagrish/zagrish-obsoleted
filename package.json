@@ -1,0 +1,35 @@
+{
+  "name": "zagrish",
+  "version": "1.0.0",
+  "description": "Just another NextJS website.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zagrish/zagrish.git"
+  },
+  "keywords": [],
+  "author": "Irving Dinh <irving.dinh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zagrish/zagrish/issues"
+  },
+  "homepage": "https://github.com/zagrish/zagrish#readme",
+  "dependencies": {
+    "next": "^12.1.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@types/react": "^18.0.4",
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.5",
+    "typescript": "^4.6.3"
+  }
+}
