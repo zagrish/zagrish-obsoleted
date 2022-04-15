@@ -1,7 +1,7 @@
 import {useRouter} from 'next/router';
 import {ButtonItem, MenuGroup, Section} from '@atlaskit/menu';
 
-import {faFont} from '@fortawesome/free-solid-svg-icons';
+import {faCode, faFont} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 
@@ -13,6 +13,10 @@ export default function Sidebar() {
       <MenuGroup>
         <Section title="Text Tools">
           <MenuItem href="/gadgets/string-utilities" text="String Utilities" icon={faFont} />
+        </Section>
+
+        <Section title="Encode & Decode">
+          <MenuItem href="/gadgets/base64-encode-decode" text="Base64" icon={faCode} />
         </Section>
       </MenuGroup>
     </section>
@@ -34,7 +38,7 @@ function MenuItem(props: IMenuItemProps) {
 
   const iconBefore = (
     <div className={style.menuItemIcon}>
-      <FontAwesomeIcon icon={props.icon} size="lg" fixedWidth/>
+      <FontAwesomeIcon icon={props.icon} fixedWidth/>
     </div>
   );
 
