@@ -3,7 +3,7 @@ import {ButtonItem, MenuGroup, Section} from '@atlaskit/menu';
 
 import {faCode, faFont} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import {IconProp} from '@fortawesome/fontawesome-svg-core';
 
 import style from './sidebar.module.css';
 

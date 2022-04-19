@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import {CodeBlock} from '@atlaskit/code';
 import Form, {Field, FormSection} from '@atlaskit/form';
 import Tabs, {Tab, TabList, TabPanel} from '@atlaskit/tabs';
 import TextArea from '@atlaskit/textarea';
@@ -7,8 +6,12 @@ import TextArea from '@atlaskit/textarea';
 import Layout from 'src/components/templates/layout/layout';
 
 export default function Page() {
+  const breadcrumbs = [
+    {text: 'Encode & Decode'},
+  ];
+
   return (
-    <Layout title="Base64 Encode & Decode">
+    <Layout breadcrumbs={breadcrumbs} title="Base64 Encode & Decode">
       <Tabs id="default" onChange={console.log}>
         <TabList>
           <Tab>Encode</Tab>
@@ -42,13 +45,13 @@ function Encoder() {
             <FormSection>
               <Field id="input" name="input" label="Input">
                 {() => (
-                  <TextArea rows={6} onChange={onChange}/>
+                  <TextArea resize="none" rows={12} onChange={onChange}/>
                 )}
               </Field>
 
               <Field id="output" name="output" label="Output">
                 {() => (
-                  <CodeBlock language="text" text={btoa(input)}/>
+                  <TextArea resize="none" rows={12} value={btoaSafely(input)} isReadOnly/>
                 )}
               </Field>
             </FormSection>
@@ -70,17 +73,17 @@ function Decoder() {
     <div className="flex-1">
       <Form onSubmit={null}>
         {({formProps}) => (
-          <form {...formProps}>
+          <form className="flex-1" {...formProps}>
             <FormSection>
               <Field id="input" name="input" label="Input">
                 {() => (
-                  <TextArea rows={6} onChange={onChange}/>
+                  <TextArea resize="none" rows={12} onChange={onChange}/>
                 )}
               </Field>
 
               <Field id="output" name="output" label="Output">
                 {() => (
-                  <CodeBlock language="text" text={atob(input)}/>
+                  <TextArea resize="none" rows={12} value={atobSafely(input)} isReadOnly/>
                 )}
               </Field>
             </FormSection>
@@ -89,4 +92,24 @@ function Decoder() {
       </Form>
     </div>
   );
+}
+
+function btoaSafely(input: string): string {
+  if (typeof window === 'undefined' || typeof window.btoa === 'undefined') {
+    return '';
+  }
+
+  return window.btoa(input);
+}
+
+function atobSafely(input: string): string {
+  if (typeof window === 'undefined' || typeof window.atob === 'undefined') {
+    return '';
+  }
+
+  try {
+    return window.atob(input);
+  } catch (e: any) {
+    return e.message;
+  }
 }

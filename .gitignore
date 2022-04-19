@@ -105,3 +105,6 @@ dist
 
 # JetBrains IDE
 .idea/
+
+# Vercel
+.vercel
