@@ -190,6 +190,17 @@
     "@babel/runtime" "^7.0.0"
     "@emotion/core" "^10.0.9"
 
+"@atlaskit/textfield@^5.1.9":
+  version "5.1.9"
+  resolved "https://registry.yarnpkg.com/@atlaskit/textfield/-/textfield-5.1.9.tgz#692bc8222e9a3c1a8a6dd886125a9ee905a175fd"
+  integrity sha512-r9faXOPxzJqT3/GbPjbKLQWokYFXwrlRdidcY0YfeHUXEyYSWcS1n8nGv7/0R7eZKZjd+Vir+eovbVBXWuN4xw==
+  dependencies:
+    "@atlaskit/analytics-next" "^8.2.0"
+    "@atlaskit/theme" "^12.1.0"
+    "@atlaskit/tokens" "^0.9.0"
+    "@babel/runtime" "^7.0.0"
+    "@emotion/core" "^10.0.9"
+
 "@atlaskit/theme@^12.0.0", "@atlaskit/theme@^12.1.0":
   version "12.1.6"
   resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-12.1.6.tgz#1ad0043b921f10fb2d172af48c28f68033d6562f"

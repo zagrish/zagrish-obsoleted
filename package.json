@@ -34,6 +34,7 @@
     "@atlaskit/page-header": "^10.2.2",
     "@atlaskit/tabs": "^13.2.9",
     "@atlaskit/textarea": "^4.3.3",
+    "@atlaskit/textfield": "^5.1.9",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
